@@ -125,6 +125,8 @@ input:focus {
     border-radius: 2rem;
     cursor: pointer;
     border: 0;
+    color: white;
+    font-weight: bold;
     max-width: 150px;
     background-color: #81d340;
     -webkit-box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
