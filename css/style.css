@@ -76,6 +76,11 @@ input:focus {
     font-size: 0.8rem;
 }
 
+/* form {
+    display: flex;
+    flex-direction: column;
+} */
+
 .form-control {
     margin-bottom: 1rem;
     display: flex;
@@ -83,5 +88,73 @@ input:focus {
 }
 
 .form-control label {
-    
+    margin-bottom: 1.6rem;
+    font-weight: bold;
 }
+
+.form-control input {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+}
+
+#generator-password {
+    font-weight: bold;    
+    color: black;
+    cursor: pointer;
+    transition: .4s;
+}
+
+#generator-password:hover {
+    color: #0099ff;
+}
+
+#generated-password {
+    border: 1px solid #0099ff;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: .4rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+#register-form input[type="submit"] {
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 0;
+    max-width: 150px;
+    background-color: #81d340;
+    -webkit-box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    align-self: flex-end;
+    text-align: left;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  
+  #register-form input[type="submit"]:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    -webkit-box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  #register-form input[type="submit"]:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    -webkit-box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition: 100ms;
+    transition: 100ms;
+  }
+  
