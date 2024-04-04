@@ -10,7 +10,6 @@
 
 html, body {
     height: auto;
-    min-height: 100vh;
 }
 
 html {
@@ -93,14 +92,14 @@ input:focus {
     padding: 1rem 0;
 }
 
-#generator-password {
+#generate-password {
     font-weight: bold;    
     color: black;
     cursor: pointer;
     transition: .4s;
 }
 
-#generator-password:hover {
+#generate-password:hover {
     color: #0099ff;
 }
 
