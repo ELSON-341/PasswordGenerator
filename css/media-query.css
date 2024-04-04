@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+    #register-container {
+        max-width: 350px;
+        margin: 2rem 10px;
+    }
+
+    #register-banner {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    #register-container {
+        max-width: 710px;
+    }
+
+    #register-banner h1 {
+        font-size: 3.2rem;
+        word-spacing: 4rem;
+    }
+}
