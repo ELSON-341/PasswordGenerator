@@ -1,54 +1,51 @@
 'use strict'
-// Seleção de Elementos
-const generatePassworBtn = document.getElementById('generate-password')
-const generatedPassword = document.getElementById('generated-password')
 
-// Funções
+// selecting the Element
+const generatePasswordBtn = document.querySelector('#generate-password')
+const generatedPasswordElement = document.querySelector('#generated-password')
+
+// funtions
 const getLetterLowerCase = () => {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
 }
 
-const getUpperCase = () => {
+const getLetterUpperCase = () => {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
 }
 
-const getNumber = () => {
-    return String(Math.floor(Math.random() * 10)).toString()
-}
+const getNumber = () => Math.floor(Math.random() *  10)
 
-const getSymbol = () =>{
+const getSymbol = () => {
     const symbol = '(){}[];=,<>.!?+-:%$#@*&/'
     return symbol[Math.floor(Math.random() * symbol.length)]
 }
-const generatePassword = (getLetterLowerCase, getUpperCase, getNumber, getSymbol) => {
-    let password = ''
+
+const passwordGenerator = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
     const passwordLength = 10
 
-    const generators = [
+    let password = ''
+    const generator = [
         getLetterLowerCase,
-        getUpperCase,
+        getLetterUpperCase,
         getNumber,
         getSymbol
     ]
 
-    for (let i = 0; i < passwordLength; i += 4) {
-        generators.forEach(() => {
-            const randomValue = generators[Math.floor(Math.random() * generators.length)]()
-
+    for(let i = 0; i < passwordLength; i += generator.length) {
+        generator.forEach(() => {
+            const randomValue = generator[Math.floor(Math.random() * generator.length)]()
             password += randomValue
         })
     }
     password = password.slice(0, passwordLength)
-
-    generatedPassword.style.display = 'block'
-    generatedPassword.querySelector('h4').innerText = password
+    generatedPasswordElement.style.display = 'block'
+    generatedPasswordElement.querySelector('h4').innerText = password
 }
-
-// Eventos
-generatePassworBtn.addEventListener('click', () => {
-    generatePassword(
+// events
+generatePasswordBtn.addEventListener('click', () => {
+    passwordGenerator(
         getLetterLowerCase,
-        getUpperCase,
+        getLetterUpperCase,
         getNumber,
         getSymbol
     )

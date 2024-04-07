@@ -14,6 +14,12 @@
     #register-form p {
         font-size: 11px;
     }
+
+    #generated-password p {
+        color: #81d340;
+        font-weight: bold;
+        font-size: 1rem;
+    } 
 }
 
 /* tablet */
@@ -30,4 +36,10 @@
     #register-form p {
         font-size: 10.7px;
     }
+
+    #generated-password p {
+        color: #81d340;
+        font-weight: bold;
+        font-size: 1rem;
+    } 
 }
