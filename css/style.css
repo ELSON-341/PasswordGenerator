@@ -99,7 +99,7 @@ input:focus {
     transition: .4s;
 }
 
-#generate-password:hover {
+#open-generate-password:hover {
     color: #0099ff;
 }
 
@@ -111,7 +111,7 @@ input:focus {
     color: #333;
     text-align: center;
     margin-bottom: 1rem;
-    display: none;
+    /* display: none; */
 }
 
 #generated-password p {
@@ -120,7 +120,8 @@ input:focus {
     font-size: 1rem;
 } 
 
-#register-form input[type="submit"] {
+#register-form input[type="submit"],
+#generate-password {
     padding: 1rem 1.4rem;
     border-radius: 2rem;
     cursor: pointer;
@@ -128,24 +129,25 @@ input:focus {
     border: 0;
     color: white;
     font-weight: bold;
-    max-width: 150px;
     background-color: #81d340;
     -webkit-box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
-    font-size: 15px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
   
-  #register-form input[type="submit"]:hover {
+  #register-form input[type="submit"]:hover,
+  #generate-password:hover {
     letter-spacing: 3px;
+    border: none;
     background-color: hsl(261deg 80% 48%);
     -webkit-box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
     box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
   }
   
-  #register-form input[type="submit"]:active {
+  #register-form input[type="submit"]:active,
+  #generate-password:active {
     letter-spacing: 3px;
     background-color: hsl(261deg 80% 48%);
     -webkit-box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
@@ -157,3 +159,46 @@ input:focus {
     transition: 100ms;
   }
   
+  /* second version */
+  #generate-options {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #dddd;
+  }
+
+  #generate-options .form-control {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #generate-options label {
+    font-size: 0.8rem;
+  }
+
+  #generate-options input {
+    max-width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  #generate-options button {
+    background-color: #0097ff;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #copy-password {
+    margin: 1rem auto;
+    border: 1px solid #81d340; 
+    background-color: transparent;
+    color: #81d340;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: bold;
+  }
+
+  #copy-password:hover {
+    background-color: #81d340;
+    color: white;
+  }
