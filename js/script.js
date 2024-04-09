@@ -4,6 +4,14 @@
 const generatePasswordBtn = document.querySelector('#generate-password')
 const generatedPasswordElement = document.querySelector('#generated-password')
 
+// Novas funcionalidade
+const generateOptionsContainer = document.querySelector('#generate-options')
+const lengthInpunt = document.querySelector('#length')
+const letterInput = document.querySelector('#letters')
+const numberInput = document.querySelector('#numbers')
+const symbolsInput = document.querySelector('#symbols')
+const copyPassword = document.querySelector('#copy-password')
+
 // funtions
 const getLetterLowerCase = () => {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
@@ -21,15 +29,18 @@ const getSymbol = () => {
 }
 
 const passwordGenerator = (getLetterLowerCase, getLetterUpperCase, getNumber, getSymbol) => {
-    const passwordLength = 10
+    const passwordLength = lengthInpunt.value
 
     let password = ''
-    const generator = [
-        getLetterLowerCase,
-        getLetterUpperCase,
-        getNumber,
-        getSymbol
-    ]
+    const generator = []
+
+    if(letterInput.checked) generator.push(getLetterLowerCase, getLetterUpperCase)
+
+    if(numberInput.checked) generator.push(getNumber)
+
+    if(symbolsInput.checked) generator.push(getSymbol)
+
+    if(lengthInpunt.value === 0) return
 
     for(let i = 0; i < passwordLength; i += generator.length) {
         generator.forEach(() => {
@@ -50,3 +61,4 @@ generatePasswordBtn.addEventListener('click', () => {
         getSymbol
     )
 })
+
