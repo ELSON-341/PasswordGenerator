@@ -5,6 +5,8 @@ const generatePasswordBtn = document.querySelector('#generate-password')
 const generatedPasswordElement = document.querySelector('#generated-password')
 
 // Novas funcionalidade
+const optionsDisplay = document.querySelector('#open-generate-password')
+console.log(optionsDisplay);
 const generateOptionsContainer = document.querySelector('#generate-options')
 const lengthInpunt = document.querySelector('#length')
 const letterInput = document.querySelector('#letters')
@@ -62,3 +64,6 @@ generatePasswordBtn.addEventListener('click', () => {
     )
 })
 
+optionsDisplay.addEventListener('click', () => {
+    generateOptionsContainer.classList.toggle('hide')
+})

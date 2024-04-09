@@ -92,11 +92,15 @@ input:focus {
     padding: 1rem 0;
 }
 
-#generate-password {
+#open-generate-password {
     font-weight: bold;    
     color: black;
     cursor: pointer;
     transition: .4s;
+}
+
+.hide {
+  display: none;
 }
 
 #open-generate-password:hover {
