@@ -67,3 +67,17 @@ generatePasswordBtn.addEventListener('click', () => {
 optionsDisplay.addEventListener('click', () => {
     generateOptionsContainer.classList.toggle('hide')
 })
+
+copyPassword.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    const password = generatedPasswordElement.querySelector('h4').innerText
+
+    navigator.clipboard.writeText(password).then(() => {
+        copyPassword.innerText = 'Senha copiada com sucesso!'
+
+        setTimeout(() => {
+            copyPassword.innerText = 'Copiar'
+        }, 1000)
+    })
+})
